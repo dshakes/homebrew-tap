@@ -13,10 +13,10 @@
 class Distil < Formula
   desc "Compression with a quality contract — context compression for LLM agentic runtimes"
   homepage "https://github.com/dshakes/distil"
-  url "https://github.com/dshakes/distil/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "772e9f0de62954cf25032526b31a200dc08d6f891c90ed792827d9f389aa6c08"
+  url "https://github.com/dshakes/distil/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "33cec470325616658249d04bb67f52895b305894ff945e6fab847050c45578a8"
   license "Apache-2.0"
-  version "0.14.0"
+  version "0.16.0"
 
   depends_on "python@3.12"
 
