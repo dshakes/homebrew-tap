@@ -1,13 +1,14 @@
 # Homebrew formula for Distil (PyPI: distil-llm).
 #
-# To use this formula:
+# CANONICAL COPY: https://github.com/dshakes/homebrew-tap (Formula/distil.rb).
+# CI's `bump-homebrew` release job rewrites the tap on every v* tag, so the tap
+# is always current; this in-repo copy is a reference snapshot and may lag.
+#
+# To install:
 #   brew tap dshakes/tap
 #   brew install dshakes/tap/distil
 #
-# Or clone this file into your own tap at:
-#   $(brew --repo)/Library/Taps/<yourname>/homebrew-tap/Formula/distil.rb
-#
-# sha256 is for the v1.20.2 source tarball. To recompute for a new version:
+# sha256 is for the v1.11.2 source tarball. To recompute for a new version:
 #   curl -sL https://github.com/dshakes/distil/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
 
 class Distil < Formula
