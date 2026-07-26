@@ -8,16 +8,16 @@
 #   brew tap dshakes/tap
 #   brew install dshakes/tap/distil
 #
-# sha256 is for the v1.32.0 source tarball. To recompute for a new version:
+# sha256 is for the v1.33.0 source tarball. To recompute for a new version:
 #   curl -sL https://github.com/dshakes/distil/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
 
 class Distil < Formula
   desc "Compression with a quality contract — context compression for LLM agentic runtimes"
   homepage "https://github.com/dshakes/distil"
-  url "https://github.com/dshakes/distil/archive/refs/tags/v1.32.0.tar.gz"
-  sha256 "ac97c6b711b63a564a6489113b3e7c166b946a1c7407c38ebcd7c24cca68a0cd"
+  url "https://github.com/dshakes/distil/archive/refs/tags/v1.33.0.tar.gz"
+  sha256 "b591d423308067b8738644331788ac6674360ded318bf2809add75a60c09bc60"
   license "Apache-2.0"
-  version "1.32.0"
+  version "1.33.0"
 
   depends_on "python@3.12"
 
