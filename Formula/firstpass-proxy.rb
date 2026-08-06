@@ -1,25 +1,25 @@
 class FirstpassProxy < Formula
   desc "Drop-in, Anthropic-compatible LLM proxy that routes each request to the cheapest model that provably passes a quality gate, escalates on failure, and records a tamper-evident audit trace."
   homepage "https://dshakes.github.io/firstpass"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.4.1/firstpass-proxy-aarch64-apple-darwin.tar.xz"
-      sha256 "d29db7ce06f04718772aa7cf166132c9a73b84b2fba79406ef39d9696eda4b96"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.5.0/firstpass-proxy-aarch64-apple-darwin.tar.xz"
+      sha256 "554d9671699ddfc7e3eb0f44518d5fe8dc9ac75fac0859487c5b310a4c50fc08"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.4.1/firstpass-proxy-x86_64-apple-darwin.tar.xz"
-      sha256 "fa96ebfc17a34bd368d58dbda28b40291cb3d9c84fccd5cc8e50787a1bc10f7d"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.5.0/firstpass-proxy-x86_64-apple-darwin.tar.xz"
+      sha256 "8d696471b8ae8bf9ede5e5632c695511e48620d9be4e4c24ff452599864389f3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.4.1/firstpass-proxy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a3efed393c657a66d84b4a26e11cb6c46cada7e347a06b850e2b53b93cb6b6dc"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.5.0/firstpass-proxy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "91eb90787a744dd3b26007c5495b25056a2b55ce9cfa0099af3bfb5b84b1eab6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.4.1/firstpass-proxy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9b76daa0317b1fc4e4c65d7268ab48a797059108299782c2edd727351106cc4b"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.5.0/firstpass-proxy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b99118d2f3c7c0f975ad18d9fa313439d3c8a7842413fed9b626f1b8e5acb09d"
     end
   end
   license "Apache-2.0"
