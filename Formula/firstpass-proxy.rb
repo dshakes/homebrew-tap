@@ -1,25 +1,25 @@
 class FirstpassProxy < Formula
   desc "Drop-in, Anthropic-compatible LLM proxy that routes each request to the cheapest model that provably passes a quality gate, escalates on failure, and records a tamper-evident audit trace."
   homepage "https://dshakes.github.io/firstpass"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.6.0/firstpass-proxy-aarch64-apple-darwin.tar.xz"
-      sha256 "5f948d4650a9bf4381eb7ff6a2176383d78c55f79efa44b36cd1acbad8237e61"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.7.0/firstpass-proxy-aarch64-apple-darwin.tar.xz"
+      sha256 "6bbe0eea642db41f180b4cd967397b45a795a667bc2e960b5aa576c7bfe27009"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.6.0/firstpass-proxy-x86_64-apple-darwin.tar.xz"
-      sha256 "b46a463fef4f598e5f5b4d99ac49fffa46663bc54404bd9c6bb71b01efab46c5"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.7.0/firstpass-proxy-x86_64-apple-darwin.tar.xz"
+      sha256 "ed11da07c305abf5285338d2d76f9aff0a9ef51d9cf026fb2d034c4dbc101c6b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.6.0/firstpass-proxy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3953c099298fe5949d098b20a6bac067d81111416cbc5174a477d466bf5650b7"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.7.0/firstpass-proxy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0598c1f558c4c681e4d090d14dcedeb7f3db150d8cb91111f26df5abe0085280"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dshakes/firstpass/releases/download/v0.6.0/firstpass-proxy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "179d3b19b03b7b7b62e1dc572d8e432c7566c51774a5ba0c41ba19a399f99469"
+      url "https://github.com/dshakes/firstpass/releases/download/v0.7.0/firstpass-proxy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "74fafca23927cf4626215403538c984946be867e1aef68e266fcd4335dff7fbd"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class FirstpassProxy < Formula
   end
 
   def install
-    bin.install "firstpass", "firstpass-proxy" if OS.mac? && Hardware::CPU.arm?
-    bin.install "firstpass", "firstpass-proxy" if OS.mac? && Hardware::CPU.intel?
-    bin.install "firstpass", "firstpass-proxy" if OS.linux? && Hardware::CPU.arm?
-    bin.install "firstpass", "firstpass-proxy" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "firstpass", "firstpass-proxy"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "firstpass", "firstpass-proxy"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "firstpass", "firstpass-proxy"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "firstpass", "firstpass-proxy"
+    end
 
     install_binary_aliases!
 
