@@ -11,7 +11,7 @@ class Halo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_darwin_amd64.tar.gz"
-      sha256 "f0d4ea70ece3d073ebdb7209a4d760349e03af3efbadce4a432fa8977fd3281b"
+      sha256 "9041e79df2bb37fe2e3344004a900cacdab94d7c31c5196931289f9a9c015ec8"
 
       define_method(:install) do
         bin.install "halo"
@@ -19,7 +19,7 @@ class Halo < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_darwin_arm64.tar.gz"
-      sha256 "b91a88ba7fb8b6b23c23679c5989404a70f36fa22b01e5c3ad7ab3642cf27955"
+      sha256 "ee8dfb6d41698ddcce027ce77f9f2219024c4847d3e743a4adb0f757c5123a18"
 
       define_method(:install) do
         bin.install "halo"
@@ -30,14 +30,14 @@ class Halo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_linux_amd64.tar.gz"
-      sha256 "ecfc30979ec978fac344f31e1b770a2df62579b6987fea6511801c08f2ca007d"
+      sha256 "b2490c61fb6c67f0866251fd3939ba7af0b934c3255393a324d06bb544daf039"
       define_method(:install) do
         bin.install "halo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_linux_arm64.tar.gz"
-      sha256 "c06d9006c9ff179fa28393f9bc4b126a92c48d3fc6a412ce9c52e96b99801232"
+      sha256 "74f7e1c461ce6ba162a6095388435d8432234203d1b25429aba3072d968abe55"
       define_method(:install) do
         bin.install "halo"
       end
