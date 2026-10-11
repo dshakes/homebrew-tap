@@ -5,21 +5,21 @@
 class Halo < Formula
   desc "Control plane for AI coding CLIs (Claude Code, Codex, Gemini)"
   homepage "https://dshakes.github.io/halos"
-  version "0.1.1"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_darwin_amd64.tar.gz"
-      sha256 "9041e79df2bb37fe2e3344004a900cacdab94d7c31c5196931289f9a9c015ec8"
+      url "https://github.com/dshakes/halos/releases/download/v0.2.0/halo_0.2.0_darwin_amd64.tar.gz"
+      sha256 "0f39920040fa53b524102587f6e83540ad011e42780ed1046d579f097659f0b5"
 
       define_method(:install) do
         bin.install "halo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_darwin_arm64.tar.gz"
-      sha256 "ee8dfb6d41698ddcce027ce77f9f2219024c4847d3e743a4adb0f757c5123a18"
+      url "https://github.com/dshakes/halos/releases/download/v0.2.0/halo_0.2.0_darwin_arm64.tar.gz"
+      sha256 "5b0ffb485f6226a7daa28e213ebf8ce9d114a642fe1d570d9da2f563ff10dcc9"
 
       define_method(:install) do
         bin.install "halo"
@@ -29,15 +29,15 @@ class Halo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_linux_amd64.tar.gz"
-      sha256 "b2490c61fb6c67f0866251fd3939ba7af0b934c3255393a324d06bb544daf039"
+      url "https://github.com/dshakes/halos/releases/download/v0.2.0/halo_0.2.0_linux_amd64.tar.gz"
+      sha256 "9a8a3218f224bf3c97ae5fe2477055ddb0248d56c8c6b610ff0c407e0912fdf7"
       define_method(:install) do
         bin.install "halo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dshakes/halos/releases/download/v0.1.1/halo_0.1.1_linux_arm64.tar.gz"
-      sha256 "74f7e1c461ce6ba162a6095388435d8432234203d1b25429aba3072d968abe55"
+      url "https://github.com/dshakes/halos/releases/download/v0.2.0/halo_0.2.0_linux_arm64.tar.gz"
+      sha256 "9897c4545f930a9346e565cc6ad24cb1dca8fe1a3b78a7bd09627517069cf68f"
       define_method(:install) do
         bin.install "halo"
       end
